@@ -1,30 +1,5 @@
 <?xml version="1.0"?>
 <beans xmlns="http://java.sun.com/xml/ns/javaee"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://jboss.org/schema/cdi/beans_1_0.xsd">
- <decorators>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.receptor.mxi.AppenderIdentificacao</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.receptor.mxi.AppenderEmitente</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.receptor.mxi.AppenderDestinatarioEmpresa</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.receptor.mxi.AppenderDestinatarioCustomer</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.receptor.mxi.AppenderDestinatarioVendor</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.receptor.mxi.AppenderTransporte</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.receptor.mxi.AppenderItens</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.receptor.mxi.AppenderEntrega</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.receptor.mxi.AppenderInformacoesAdicionais</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.process.calculation.AppenderCOFINSAliquota</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.process.calculation.AppenderIPINT</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.process.calculation.AppenderPISAliquota</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.process.calculation.AppenderICMS00</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.process.calculation.AppenderICMS10</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.process.calculation.AppenderICMS40</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.process.calculation.AppenderICMSTot</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.process.calculation.AppenderIPITRIB</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.process.calculation.AppenderCOFINSNT</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.process.calculation.AppenderPISNT</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.process.calculation.AppenderCFOP</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.process.calculation.sap.tax.AppenderShipmentItens</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.process.calculation.sap.tax.AppenderNFeItens</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.process.calculation.sap.tax.AppenderShipmentHeaders</class>
-  <class>br.com.r3wa.fiscalpackage.core.nfe.process.calculation.sap.tax.AppenderNFeHeaders</class>
- </decorators>
+ 
 </beans>
