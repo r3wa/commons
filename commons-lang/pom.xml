@@ -24,8 +24,18 @@
   				<target>1.8</target>
   			</configuration>
   		</plugin>
+  		 <plugin>
+           <groupId>org.codehaus.mojo</groupId>
+        	<artifactId>sonar-maven-plugin</artifactId>
+        	<version>2.3</version>
+        	<configuration>
+        		<sonar.host.url>http://52.24.245.143:9000/</sonar.host.url>
+        	</configuration>
+      </plugin>
   	</plugins>
   </build>
+
+
 
   <dependencies>
 
