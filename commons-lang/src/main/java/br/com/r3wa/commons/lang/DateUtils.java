@@ -1,5 +1,6 @@
 package br.com.r3wa.commons.lang;
 
+import static org.apache.commons.lang3.StringUtils.isBlank;
 import static org.apache.commons.lang3.time.DateUtils.parseDate;
 import static org.apache.commons.lang3.time.DateUtils.setHours;
 import static org.apache.commons.lang3.time.DateUtils.setMilliseconds;
@@ -38,11 +39,17 @@ public class DateUtils {
 
 
 	public static Date toDate(String date, String pattern) {
+
+		if(isBlank(date)){
+			return null;
+		}
+
 		try {
 			return parseDate(date, pattern);
 		} catch (Exception e) {
-			throw new R3WACommonsLangException("Ocorreu o seguinte problema ao criar o Date -> ", e);
+			throw new R3WACommonsLangException("A data [ " + date + " ] nao esta no formato [ " + pattern + " ]");
 		}
+
 	}
 
 

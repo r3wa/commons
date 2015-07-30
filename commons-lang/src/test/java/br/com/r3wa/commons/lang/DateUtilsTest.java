@@ -1,6 +1,7 @@
 package br.com.r3wa.commons.lang;
 
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
 
 import java.util.Calendar;
@@ -58,12 +59,25 @@ public class DateUtilsTest {
 	}
 
 
+	@Test
+	public void shouldReturnNullWhenTheDateIsEmpty() {
+		assertThat(DateUtils.toDate(null, "yyyy-MM-dd"), nullValue());
+		assertThat(DateUtils.toDate("", "yyyy-MM-dd"), nullValue());
+		assertThat(DateUtils.toDate(" ", "yyyy-MM-dd"), nullValue());
+	}
+
+
+
+
 
 
 	@Test(expected=R3WACommonsLangException.class)
 	public void shouldTrhowOneR3WACommonsLangExceptionWhenThePatternIsInvalid() {
 		DateUtils.toDate("1976-10-01", "invalid pattern");
 	}
+
+
+
 
 
 
