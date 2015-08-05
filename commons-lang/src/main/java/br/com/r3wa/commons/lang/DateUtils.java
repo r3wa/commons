@@ -1,5 +1,6 @@
 package br.com.r3wa.commons.lang;
 
+import static java.time.format.DateTimeFormatter.BASIC_ISO_DATE;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 import static org.apache.commons.lang3.time.DateUtils.parseDate;
 import static org.apache.commons.lang3.time.DateUtils.setHours;
@@ -7,6 +8,7 @@ import static org.apache.commons.lang3.time.DateUtils.setMilliseconds;
 import static org.apache.commons.lang3.time.DateUtils.setMinutes;
 import static org.apache.commons.lang3.time.DateUtils.setSeconds;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class DateUtils {
@@ -52,6 +54,13 @@ public class DateUtils {
 
 	}
 
+
+
+
+
+	public static String now() {
+		return LocalDate.now().format(BASIC_ISO_DATE);
+	}
 
 
 

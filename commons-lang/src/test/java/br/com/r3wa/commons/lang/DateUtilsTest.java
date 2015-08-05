@@ -1,9 +1,11 @@
 package br.com.r3wa.commons.lang;
 
+import static java.time.format.DateTimeFormatter.BASIC_ISO_DATE;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
 
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -79,6 +81,11 @@ public class DateUtilsTest {
 
 
 
+
+	@Test()
+	public void shouldReturn() {
+		assertThat(DateUtils.now(), equalTo(LocalDate.now().format(BASIC_ISO_DATE)));
+	}
 
 
 
