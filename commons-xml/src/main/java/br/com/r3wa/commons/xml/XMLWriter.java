@@ -1,7 +1,7 @@
 package br.com.r3wa.commons.xml;
 
-public interface XMLWriter<T> {
+public interface XMLWriter {
 
-	String write(Class<T> c, T t);
+	String write(Class<? extends Object> c, Object obj);
 
 }

@@ -9,14 +9,14 @@ import org.junit.Test;
 public class JaxbXMLWriterTest {
 
 
-	private XMLWriter<XML> xmlWriter;
+	private XMLWriter xmlWriter;
 
 
 
 
 	@Before
 	public void setUp() throws Exception {
-		xmlWriter = new JaxbXMLWriter<XML>();
+		xmlWriter = new JaxbXMLWriter();
 	}
 
 

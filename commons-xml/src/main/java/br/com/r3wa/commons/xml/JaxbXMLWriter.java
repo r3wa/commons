@@ -7,16 +7,16 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
 @JAXB
-public class JaxbXMLWriter<T> implements XMLWriter<T> {
+public class JaxbXMLWriter implements XMLWriter {
 
 
 	@Override
-	public String write(Class<T> c, T t) {
+	public String write(Class<? extends Object> c, Object obj) {
 
 		try {
 
 			StringWriter sw = new StringWriter();
-			createUnmarshaller(c).marshal(t, sw);
+			createUnmarshaller(c).marshal(obj, sw);
 
 			return sw.toString();
 
@@ -29,7 +29,7 @@ public class JaxbXMLWriter<T> implements XMLWriter<T> {
 
 
 
-	private Marshaller createUnmarshaller(Class<T> c) throws JAXBException {
+	private Marshaller createUnmarshaller(Class<? extends Object> c) throws JAXBException {
 		return JAXBContext.newInstance(c).createMarshaller();
 	}
 
