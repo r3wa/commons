@@ -57,12 +57,9 @@ public class DateUtils {
 
 
 
-
 	public static String now() {
 		return LocalDate.now().format(BASIC_ISO_DATE);
 	}
-
-
 
 
 
