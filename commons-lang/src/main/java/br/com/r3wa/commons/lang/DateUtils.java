@@ -10,6 +10,10 @@ import static org.apache.commons.lang3.time.DateUtils.setSeconds;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.GregorianCalendar;
+
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 public class DateUtils {
 
@@ -49,7 +53,7 @@ public class DateUtils {
 		try {
 			return parseDate(date, pattern);
 		} catch (Exception e) {
-			throw new R3WACommonsLangException("A data [ " + date + " ] nao esta no formato [ " + pattern + " ]");
+			throw new R3WACommonsLangException("The date [ " + date + " ] is not in formart -->  [ " + pattern + " ]");
 		}
 
 	}
@@ -60,6 +64,45 @@ public class DateUtils {
 	public static String now() {
 		return LocalDate.now().format(BASIC_ISO_DATE);
 	}
+
+
+
+
+
+	public static XMLGregorianCalendar xmlDate(Date date) {
+
+		try {
+
+			GregorianCalendar calendar = new GregorianCalendar();
+			calendar.setTime(date);
+
+			return DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+
+		} catch (Exception e) {
+			throw new R3WACommonsLangException("One problem occurred when create xml date -- > " + e.getMessage());
+		}
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

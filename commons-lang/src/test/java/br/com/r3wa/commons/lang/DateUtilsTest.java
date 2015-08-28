@@ -2,12 +2,15 @@ package br.com.r3wa.commons.lang;
 
 import static java.time.format.DateTimeFormatter.BASIC_ISO_DATE;
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.notNullValue;
 import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
 
 import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
+
+import javax.xml.datatype.XMLGregorianCalendar;
 
 import org.junit.Test;
 
@@ -83,9 +86,41 @@ public class DateUtilsTest {
 
 
 	@Test()
-	public void shouldReturn() {
+	public void shouldReturnTheNowDate() {
 		assertThat(DateUtils.now(), equalTo(LocalDate.now().format(BASIC_ISO_DATE)));
 	}
+
+
+
+
+
+	@Test()
+	public void shouldReturnOneXMLGregorianCalendar() {
+		XMLGregorianCalendar xmlDate = DateUtils.xmlDate(new Date());
+		assertThat(xmlDate, notNullValue());
+	}
+
+
+
+
+	@Test(expected=R3WACommonsLangException.class)
+	public void shouldTrhowOneR3WACommonsLangExceptionWhenAnyProblemOcorred() {
+		DateUtils.xmlDate(null);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
