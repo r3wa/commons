@@ -25,5 +25,11 @@ public class NumberUtilsTest {
 	}
 
 
+	@Test
+	public void shouldCreateOneBigDoubleByOneDouble() {
+		assertThat(NumberUtils.toBigDouble(1.1), equalTo(new BigDecimal(1.1)));
+	}
+
+
 
 }
