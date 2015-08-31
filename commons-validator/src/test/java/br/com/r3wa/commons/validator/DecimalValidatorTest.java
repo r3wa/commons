@@ -39,9 +39,10 @@ public class DecimalValidatorTest {
 
 
 	@Test
-	public void shoultReturnFalseWhenTheValueZero() {
-		assertThat(validator.isValid(0.0, null), not(true));
+	public void shoultReturnTrueWhenTheValueZero() {
+		assertThat(validator.isValid(0.0, null), not(false));
 	}
+
 
 
 	@Test
@@ -49,6 +50,11 @@ public class DecimalValidatorTest {
 		assertThat(validator.isValid(0.0001, null), not(false));
 	}
 
+
+	@Test
+	public void shoultReturnFalseWhenTheValueIsLessOfZero() {
+		assertThat(validator.isValid(-0.1, null), not(true));
+	}
 
 
 }

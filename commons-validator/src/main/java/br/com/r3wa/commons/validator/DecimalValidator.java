@@ -16,7 +16,7 @@ public class DecimalValidator implements ConstraintValidator<Decimal, Double> {
 
 	@Override
 	public boolean isValid(Double value, ConstraintValidatorContext context) {
-		return value == null ? false : value > 0.0 ? true : false;
+		return value == null ? false : value >= 0.0 ? true : false;
 	}
 
 
