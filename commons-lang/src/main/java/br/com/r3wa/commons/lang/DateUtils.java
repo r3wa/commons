@@ -19,7 +19,7 @@ public class DateUtils {
 
 
 
-	public static Date fisrtHourDay(Date date) {
+	public static Date firstHourDay(Date date) {
 		return setTime(date, 0 , 0 ,0);
 	}
 

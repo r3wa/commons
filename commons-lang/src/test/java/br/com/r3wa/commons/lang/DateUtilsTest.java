@@ -21,7 +21,7 @@ public class DateUtilsTest {
 	@Test
 	public void shouldSetHourOfDateToMindNight() {
 
-	  Date date = DateUtils.fisrtHourDay(new Date());
+	  Date date = DateUtils.firstHourDay(new Date());
 
 	  Calendar calendar = Calendar.getInstance();
 	  calendar.setTime(date);
