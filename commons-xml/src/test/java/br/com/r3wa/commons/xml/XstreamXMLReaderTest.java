@@ -23,8 +23,8 @@ public class XstreamXMLReaderTest {
 	@Test
 	public void shouldCreatOneObjectWithTheXML() {
 		XML xml =  xmlReader.read(XML.class,"<xml><attr1>1</attr1><attr2>string</attr2></xml>");
-		/*assertThat(xml.attr1, equalTo(1));
-		assertThat(xml.attr2, equalTo("string"));*/
+		assertThat(xml.attr1, equalTo(1));
+		assertThat(xml.attr2, equalTo("string"));
 	}
 
 
@@ -32,7 +32,7 @@ public class XstreamXMLReaderTest {
 
 	@Test(expected=R3WACommonsXmlException.class)
 	public void shouldThrowOneR3WACommonsXmlExceptionToAnyProblem() {
-		/*xmlReader.read(XML.class,null);*/
+		xmlReader.read(XML.class,null);
 	}
 
 	
