@@ -6,7 +6,7 @@ import static org.junit.Assert.assertThat;
 import org.junit.Before;
 import org.junit.Test;
 
-public class JaxbXMLWriterTest {
+public class JaxbWriterTest {
 
 
 	private XMLWriter<XML> xmlWriter;
