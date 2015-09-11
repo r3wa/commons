@@ -6,7 +6,7 @@ import static org.junit.Assert.assertThat;
 import org.junit.Before;
 import org.junit.Test;
 
-public class XstreamXMLReaderTest {
+public class XstreamReaderTest {
 
 
 	private XMLReader<XML> xmlReader;
@@ -14,7 +14,7 @@ public class XstreamXMLReaderTest {
 
 	@Before
 	public void setUp() throws Exception {
-		xmlReader = new XStreamReader();
+		xmlReader = new XStreamReader<>();
 	}
 
 
