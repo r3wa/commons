@@ -6,7 +6,7 @@ import static org.junit.Assert.assertThat;
 import org.junit.Before;
 import org.junit.Test;
 
-public class JaxbXMLReaderTest {
+public class XstreamReaderTest {
 
 
 	private XMLReader<XML> xmlReader;
@@ -14,10 +14,11 @@ public class JaxbXMLReaderTest {
 
 	@Before
 	public void setUp() throws Exception {
-		xmlReader = new JaxbXMLReader<>();
+		xmlReader = new XStreamReader<>();
 	}
 
 
+	
 
 	@Test
 	public void shouldCreatOneObjectWithTheXML() {
@@ -27,11 +28,13 @@ public class JaxbXMLReaderTest {
 	}
 
 
+	
 
 	@Test(expected=R3WACommonsXmlException.class)
 	public void shouldThrowOneR3WACommonsXmlExceptionToAnyProblem() {
 		xmlReader.read(XML.class,null);
 	}
 
+	
 
 }
