@@ -6,14 +6,14 @@ import org.junit.Test;
 public class XStreamWriterTest {
 
 
-	private XMLWriter<XML> xmlWriter;
+	private XMLWriter xmlWriter;
 
 
 
 
 	@Before
 	public void setUp() throws Exception {
-		xmlWriter = new XStreamWriter<>();
+		xmlWriter = new XStreamWriter();
 	}
 
 

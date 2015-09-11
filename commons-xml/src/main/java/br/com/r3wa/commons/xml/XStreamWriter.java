@@ -1,10 +1,11 @@
 package br.com.r3wa.commons.xml;
 
-public class XStreamWriter<T> implements XMLWriter<T> {
+public class XStreamWriter implements XMLWriter {
 
-	
+
+
 	@Override
-	public String write(Class<T> c, T t) {
+	public String write(Class<? extends Object> c, Object obj) {
 		// TODO Auto-generated method stub
 		return null;
 	}
