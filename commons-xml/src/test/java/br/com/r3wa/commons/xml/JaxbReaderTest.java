@@ -6,7 +6,7 @@ import static org.junit.Assert.assertThat;
 import org.junit.Before;
 import org.junit.Test;
 
-public class JaxbXMLReaderTest {
+public class JaxbReaderTest {
 
 
 	private XMLReader<XML> xmlReader;
