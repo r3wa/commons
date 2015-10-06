@@ -73,6 +73,11 @@ public class DateUtils {
 
 		try {
 
+
+			if(date == null){
+				return null;
+			}
+
 			GregorianCalendar calendar = new GregorianCalendar();
 			calendar.setTime(date);
 
@@ -83,6 +88,9 @@ public class DateUtils {
 		}
 
 	}
+
+
+
 
 
 

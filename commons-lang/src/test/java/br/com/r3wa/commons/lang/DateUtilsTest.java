@@ -64,6 +64,7 @@ public class DateUtilsTest {
 	}
 
 
+
 	@Test
 	public void shouldReturnNullWhenTheDateIsEmpty() {
 		assertThat(DateUtils.toDate(null, "yyyy-MM-dd"), nullValue());
@@ -85,11 +86,6 @@ public class DateUtilsTest {
 
 
 
-	@Test()
-	public void shouldReturnTheNowDate() {
-		assertThat(DateUtils.now(), equalTo(LocalDate.now().format(BASIC_ISO_DATE)));
-	}
-
 
 
 
@@ -103,15 +99,23 @@ public class DateUtilsTest {
 
 
 
-	@Test(expected=R3WACommonsLangException.class)
-	public void shouldTrhowOneR3WACommonsLangExceptionWhenAnyProblemOcorred() {
-		DateUtils.xmlDate(null);
+	@Test()
+	public void shouldTrhowOneR3WACommonsLangExceptionWhenAnyProblemO() {
+		assertThat(DateUtils.xmlDate(null), nullValue());
 	}
 
 
 
 
 
+
+
+
+
+	@Test()
+	public void shouldReturnTheNowDate() {
+		assertThat(DateUtils.now(), equalTo(LocalDate.now().format(BASIC_ISO_DATE)));
+	}
 
 
 
